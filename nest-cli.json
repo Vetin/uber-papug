@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/uber-papug/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/uber-papug/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/uber-papug",
+  "projects": {
+    "uber-papug": {
+      "type": "application",
+      "root": "apps/uber-papug",
+      "entryFile": "main",
+      "sourceRoot": "apps/uber-papug/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/uber-papug/tsconfig.app.json"
+      }
+    },
+    "demo": {
+      "type": "application",
+      "root": "apps/demo",
+      "entryFile": "main",
+      "sourceRoot": "apps/demo/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/demo/tsconfig.app.json"
+      }
+    }
+  }
+}
